@@ -14,13 +14,11 @@ public class TestController {
 
     @GetMapping("hello")
     public String testRestTemplate(){
-
         return this.restTemplate.exchange("http://localhost:8081/users", HttpMethod.GET, null, String.class).getBody();
     }
 
     @GetMapping("helloworld")
     public String testRest2Template(){
-        
         return "Hello";
     }
 
